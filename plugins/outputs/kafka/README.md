@@ -66,11 +66,11 @@ This plugin writes to a [Kafka Broker](http://kafka.apache.org/07/quickstart.htm
   ##  The total number of times to retry sending a message
   max_retry = 3
 
-  ## Optional SSL Config
-  # ssl_ca = "/etc/telegraf/ca.pem"
-  # ssl_cert = "/etc/telegraf/cert.pem"
-  # ssl_key = "/etc/telegraf/key.pem"
-  ## Use SSL but skip chain & host verification
+  ## Optional TLS Config
+  # tls_ca = "/etc/telegraf/ca.pem"
+  # tls_cert = "/etc/telegraf/cert.pem"
+  # tls_key = "/etc/telegraf/key.pem"
+  ## Use TLS but skip chain & host verification
   # insecure_skip_verify = false
 
   ## Optional SASL Config
@@ -91,10 +91,10 @@ This plugin writes to a [Kafka Broker](http://kafka.apache.org/07/quickstart.htm
 * `compression_codec`: What level of compression to use: `0` -> no compression, `1` -> gzip compression, `2` -> snappy compression
 * `required_acks`: a setting for how may `acks` required from the `kafka` broker cluster.
 * `max_retry`: Max number of times to retry failed write
-* `ssl_ca`: SSL CA
-* `ssl_cert`: SSL CERT
-* `ssl_key`: SSL key
-* `insecure_skip_verify`: Use SSL but skip chain & host verification (default: false)
+* `tls_ca`: TLS CA
+* `tls_cert`: TLS CERT
+* `tls_key`: TLS key
+* `insecure_skip_verify`: Use TLS but skip chain & host verification (default: false)
 * `data_format`: [About Telegraf data formats](https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md)
 * `topic_suffix`: Which, if any, method of calculating `kafka` topic suffix to use.
 For examples, please refer to sample configuration.
